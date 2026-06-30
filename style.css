@@ -4,33 +4,27 @@
     box-sizing: border-box;
 }
 
-body {
+body{
+    background: linear-gradient(135deg,#121212,#1A1A1A,#2B2B2B);
+    color:#F5F5F5;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(
-        135deg,
-        #000000,
-        #2b2b2b,
-        #ffffff
-    );
-    color: white;
 }
 
 /* HEADER */
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: rgba(0,0,0,0.8);
+header{
+    
+    padding:50px;
+    text-align:center;
 }
 
-header h1 {
-    color: #800020;
-    font-size: 3rem;
+header h1{
+    color:#D4AF37;
+    font-size:3rem;
 }
 
-header p {
-    margin-top: 10px;
-    color: white;
+header p{
+    color:#CFCFCF;
 }
 
 /* SEÇÕES */
@@ -39,25 +33,16 @@ section {
     padding: 60px 20px;
 }
 
-h2 {
-    color: #800020;
-    text-align: center;
-    margin-bottom: 30px;
+h2{
+    color:#D4AF37;
+    font-size:2rem;
+    margin-bottom:30px;
+    text-align:center;
 }
-
 /* SERVIÇOS */
 
 #servicos {
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.75)
-        ),
-        url('img/fundo-servicos.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* COLOCAR IMAGEM DE FUNDO */
 }
 
 .overlay {
@@ -74,31 +59,45 @@ h2 {
     gap: 20px;
 }
 
-.card {
-    width: 220px;
-    min-height: 140px;
+.card{
 
-    background-image: ('IMG/Corte.jpeg');
+    background:#242424;
 
-    border: 2px solid gold;
+    border:2px solid #D4AF37;
 
-    border-radius: 15px;
+    border-radius:18px;
 
-    padding: 20px;
+    padding:25px;
 
-    cursor: pointer;
+    width:230px;
 
-    transition: 0.3s;
+    cursor:pointer;
+
+    transition:.35s;
+
+    color:#F5F5F5;
+
+    overflow:hidden;
+
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 15px gold;
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
+
 }
 
 .card.selected {
-    background: gold;
-    color: black;
+    transform: scale(1.05);
+    
+    border:3px solid #D4AF37;
+
+    box-shadow:0 0 20px rgba(212,175,55,.6);
+
+    transform:scale(1.03);
+    
 }
 
 .card h3 {
@@ -140,16 +139,15 @@ h2 {
 
 /* TOTAL */
 
-#total {
-    margin-top: 25px;
+#total{
 
-    text-align: center;
+    color:#D4AF37;
 
-    color: gold;
+    font-size:1.6rem;
 
-    font-size: 1.5rem;
+    font-weight:bold;
 
-    font-weight: bold;
+    text-align:center;
 }
 
 /* AGENDA */
@@ -205,36 +203,44 @@ form input:focus {
     outline: 2px solid gold;
 }
 
-button {
-    padding: 15px;
+button{
 
-    border: none;
+    background:hsl(150, 98%, 33%);
 
-    border-radius: 10px;
+    color:white;
 
-    background: gold;
+    border:none;
 
-    color: black;
+    border-radius:10px;
 
-    font-weight: bold;
+    padding:15px;
 
-    cursor: pointer;
+    font-weight:bold;
 
-    transition: 0.3s;
+    transition:.3s;
+
 }
 
-button:hover {
-    transform: scale(1.05);
+button:hover{
+
+    background:#2bff00c9;
+
+    transform:scale(1.03);
+    
+
 }
 
 /* FOOTER */
 
-footer {
-    text-align: center;
+footer{
 
-    padding: 20px;
+    background:#111111;
 
-    background: #000;
+    color:#CFCFCF;
+
+    padding:25px;
+
+    text-align:center;
 }
 
 /* RESPONSIVO */
@@ -259,4 +265,30 @@ footer {
         width: 100%;
     }
 
+}
+.corte {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('img/corte.jpeg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.barba {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('img/barba.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.sobrancelha {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('img/sobrancelha.jpeg');
+
+    background-size: cover;
+    background-position: center;
 }

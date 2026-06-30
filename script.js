@@ -34,9 +34,9 @@ const precos = {
 // imagens
 
 const imagens = {
-    Corte: "img/corte.jpg",
+    Corte: "img/corte.jpeg",
     Barba: "img/barba.jpg",
-    Sobrancelha: "img/sobrancelha.jpg"
+    Sobrancelha: "img/sobrancelha.jpeg"
 };
 
 // =========================
@@ -296,7 +296,7 @@ ${data}
 ${horarioSelecionado}`;
 
         const numeroWhatsapp =
-            "5547988699812";
+            "5547988598578";
 
         const url =
             `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
