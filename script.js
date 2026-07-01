@@ -220,9 +220,11 @@ campoData.min = hoje;
 // ENVIO WHATSAPP
 // =========================
 
+const API_URL = "http://localhost:3001/api/agendar";
+
 document
     .getElementById("formAgendamento")
-    .addEventListener("submit", function (e) {
+    .addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
@@ -294,6 +296,28 @@ ${data}
 
 ⏰ Horário:
 ${horarioSelecionado}`;
+
+        try {
+
+            await fetch(API_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    nome,
+                    telefone,
+                    servicos: servicosSelecionados,
+                    barbeiro: barbeiroSelecionado,
+                    data,
+                    horario: horarioSelecionado,
+                    total
+                })
+            });
+
+        } catch (erro) {
+
+            console.error("Não foi possível agendar no Google Agenda:", erro);
+
+        }
 
         const numeroWhatsapp =
             "5547988598578";
